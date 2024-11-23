@@ -1,0 +1,73 @@
+home.js
+import { Link } from "react-router-dom";
+
+function Home() {
+    return(
+        <div>
+            <h1>this is home page</h1>
+            <Link to="about">Click to view about page</Link><br></br>
+            <Link to="contact">Click to view contact page</Link>
+        </div>
+    );    
+}
+
+export default Home;
+
+app.js for router
+import { BrowserRouter, Routes, Route from "react-router-dom"
+import About from "./About"
+import Contact from "./Contact"
+import Home from "./Home"
+
+export default function App() {
+return(
+<div>
+<Browser Router>
+<Routes>
+<Route index element={<Home/>} />
+<Route path="/contact" element=(<Contact/>} />
+<Route path="/About" element=(<About/>) />
+</Routes>
+</Browser Router>
+</div>
+  )
+}
+
+app.js for props
+import React from 'react';
+import Functionprops from "./Functionprops";
+import Classprops from "./Classprops";
+
+class App extends React.Component{
+render(){
+return (
+<center>
+<div>
+<Classprops name="Learner 1" place="place A"/>
+<button> child component</button>
+<Classprops name-"Learner 2" place="place B"/>
+<button> cilck</button>
+<Functionprops name="Learner 3" place "place C"/>
+</div></center>
+);
+}
+}
+
+export default App:
+
+app.js for component
+import React from 'react';
+import./App.css';
+import { Home } from './components/Home";
+import { Department) from './components/Department'; 
+import { Employee } from './components/Employee";
+
+function App() {
+return (
+<div className="container"> 
+<Home /> 
+<Department /> 
+<Employee />
+</div>
+
+export default App;
